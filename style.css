@@ -1,0 +1,688 @@
+/*
+Theme Name: Orthodontie Lastresne
+Theme URI: http://understrap.com
+Author: Holger Koenemann
+Author URI: http://www.holgerkoenemann.de
+GitHub Theme URI: https://github.com/understrap/understrap
+Description: Combination of Automattic´s _s theme and Bootstrap 4. Made as a solid starting point for your next theme project and WordPress website. Use it as starter theme or as a parent theme. It is up to you. Including Font Awesome support, built-in widget slider and much more you need for basic websites. IMPORTANT: All developer dependencies are not bundled with this install file. Just download the .zip, extract it and run "npm install" and "gulp copy-assets" inside the extracted /understrap folder.
+That downloads everything and moves it in place so that you can recompile your CSS and JS files;
+A developer version (with Gulp/node and Sass sources) is available on gitHub: https://github.com/understrap/understrap
+A child theme is available on Github, too: https://github.com/understrap/understrap-child;
+Version: 0.8.8
+License: UnderStrap WordPress Theme, Copyright 2013-2017 Holger Koenemann
+UnderStrap is distributed under the terms of the GNU GPL version 2
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: understrap
+Tags: one-column, custom-menu, featured-images, theme-options, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+UnderStrap is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
+
+Resource Licenses:
+Font Awesome: http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+Bootstrap: http://getbootstrap.com | https://github.com/twbs/bootstrap/blob/master/LICENSE (Code licensed under MIT, documentation under CC BY 3.0.)
+Owl Carousel 2: http://www.owlcarousel.owlgraphic.com/ | https://github.com/smashingboxes/OwlCarousel2/blob/develop/LICENSE (Code licensed under MIT)
+and of course
+jQuery: https://jquery.org | (Code licensed under MIT)
+WP Bootstrap Navwalker by Edward McIntyre: https://github.com/twittem/wp-bootstrap-navwalker | GNU GPL
+*/
+
+/*
+This file is just used to identify the theme in WordPress.
+The compiled CSS output can be found in /css/theme.css
+The SASS sources for it can be found in /sass/
+The dependencies can be found in /src/ after running "gulp copy-assets" terminal command
+
+...and now go out and play!
+*/
+
+
+
+	    #wpadminbar{
+        display:none;
+    }
+
+
+
+@font-face {
+  font-family: Calibre;
+  src: url(Calibre-Regular.otf);
+}
+
+html{
+		overflow: hidden;
+}
+
+html, body{
+	width: 100%;
+	height: 100%;
+	font-size: 100%; 
+	font-weight: 400;
+	color: #FFFFFF;
+	background-color: white;
+	font-family: Calibre;
+
+}
+
+header{
+padding: 1rem;
+display: flex;
+justify-content: space-between;
+align-items: center;
+	max-width: 80%;
+	margin: 0 auto;
+}
+
+
+.docteurs{
+	/*display: inline;*/
+	text-align: right;
+	color: #0079A5;
+	font-size: 2rem;
+	line-height: 1.06;
+	
+}
+
+
+
+
+/*
+.navbar-collapse{
+	justify-content: center;
+}*/
+
+
+/*
+.navbar, .navbar-collapse{
+	justify-content: center;
+}*/
+
+.navbar-nav{
+	justify-content: space-around;
+	flex-direction: row;
+	max-width: 70%;
+	margin: 0 auto;
+	flex-wrap: wrap;
+}
+
+.nav-link{
+	text-align: center;
+}
+
+.navbar-light .navbar-nav .nav-link{
+	text-align: center;
+}
+
+.texte-menu{
+	color: #707070;
+}
+
+#hp {
+	/*text-align: center;*/
+	max-width: 80%;
+	margin: 0 auto;
+}
+
+#hp div {
+padding-right: 7px;
+padding-left: 7px;
+padding-bottom: 14px;
+}
+
+#hp img {
+max-width: 100%;
+}
+
+footer{
+	background-color: #0079A5;
+	padding: 2rem;
+display: flex;
+justify-content: space-between;
+align-items: center;
+color: white;
+font-size: .9rem;
+}
+
+footer a {
+	color : #FFDD37;
+	text-decoration: underline;
+}
+footer a:hover {
+	color : #FF495D;
+	text-decoration: none;
+}
+
+#cabinet {
+	/*text-align: center;*/
+	max-width: 80%;
+	margin: 0 auto;
+}
+#cabinet div {
+padding-right: 7px;
+padding-left: 7px;
+
+
+}
+#cabinet .ligne {
+margin-bottom: 14px;
+}
+
+#cabinet .blocrouge {
+background-color: #FF495D; 
+max-width:503px; 
+height: 100%; 
+width: 100%; 
+padding: 3rem;
+float: right;
+overflow: auto;
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+
+
+
+#cabinet .blocbleu {
+background-color: #0079A5; 
+max-width:503px; 
+/*max-height: 503px; */
+height: 100%; 
+width: 100%; 
+padding: 3rem;
+float: left;
+overflow: auto;
+display: flex;
+flex-direction: column;
+justify-content: center;
+/*margin-right:auto; 
+margin-left:0;*/
+
+}
+
+#cabinet .blocjaune {
+background-color: #FFDD37; 
+max-width:503px; 
+/*max-height: 503px; */
+height: 100%; 
+width: 100%; 
+padding: 3rem;
+float: right;
+overflow: auto;
+display: flex;
+flex-direction: column;
+justify-content: center;
+/*margin-right:auto; 
+margin-left:0;*/
+
+}
+
+ img {
+max-width: 100%;
+}
+
+
+#cabinet h1 {
+font-size: 2.2rem;
+color: #FFDD37;
+text-align: center;
+margin-bottom: 2rem;
+}
+
+#cabinet h2 {
+font-size: 1.6rem;
+color: #FF495D;
+margin-top: 2.2rem;
+margin-bottom: 1.2rem;
+}
+
+
+#cabinet p {
+font-size: 0.9rem;
+font-weight: 200;
+}
+
+#cabinet p span{
+font-size: 1.1rem;
+font-weight: 200;
+line-height: 1.2rem;
+}
+
+
+.nopacity{
+	opacity: 0;
+}
+
+#cabinet .bleu{
+	color: #0079A5;
+}
+
+#cabinet .flechejaune{
+width: 100%;
+position: relative;
+bottom: 0px;
+max-width:503px; 
+float: right;
+}
+
+
+
+
+.bleu{
+	color: #0079A5;
+}
+
+.rouge{
+	color: #FF495D;
+}
+
+.jaune{
+	color: #FFDD37;
+}
+
+
+#sousmenuconseils .fixed{
+position: fixed;
+top:100px;
+z-index: 100;
+background-color: white;
+}
+
+
+#sousmenuconseils a {
+	padding-right: 0px;
+padding-left: 30px;
+}
+
+.bgrouge{
+	background-color: #FF495D;
+	display: flex;
+flex-direction: column;
+justify-content: space-around;
+align-items: center;
+padding: 2rem;
+padding-bottom: 1rem;
+height: 100%;
+}
+
+
+.bgjaune{
+	background-color: #FFDD37;
+	display: flex;
+flex-direction: column;
+justify-content: space-around;
+align-items: center;
+padding: 2rem;
+padding-bottom: 1rem;
+height: 100%;
+}
+
+.bgbleu{
+	background-color: #0079A5;;
+	display: flex;
+flex-direction: column;
+justify-content: space-around;
+align-items: center;
+padding: 2rem;
+padding-bottom: 1rem;
+height: 100%;
+}
+
+
+.bgblanc{
+	background-color: #FFF;
+	display: flex;
+flex-direction: column;
+justify-content: space-around;
+align-items: center;
+/*padding: 2rem;*/
+padding-bottom: 1rem;
+height: 100%;
+}
+
+a{
+	color: white; 
+}
+a:hover{
+	color: inherit; 
+   -webkit-transition: all 1s; /* Safari prior 6.1 */
+  transition: all 1s;
+}
+ .bloc a{
+	 
+   -webkit-transition: all 1s; /* Safari prior 6.1 */
+  transition: all 1s;
+}
+ .bloc a:hover{
+	
+  transform: scale(.98, .98);
+   -webkit-transition: all 1s; /* Safari prior 6.1 */
+  transition: all 1s;
+}
+
+ .bloc2 a{
+ /*	color: inherit;*/
+
+   -webkit-transition: all 1s; /* Safari prior 6.1 */
+  transition: all 1s;
+}
+
+
+ .bloc2 a:hover{
+	color: inherit;
+ /* transform: translate(0px, 5px);
+   -webkit-transition: all 1s;*/
+  transition: all 1s;
+}
+/*
+ .bloc2 a:hover>.arrow-downbleu{
+	color: inherit;
+  transform: translate(0px, 5px);
+   -webkit-transition: all 1s; 
+  transition: all 1s;
+}*/
+
+.bloc2:hover { 
+  transform: translate(0px, 4px);
+   -webkit-transition: all 1s; /* Safari prior 6.1 */
+  transition: all 1s;
+ }
+
+a.bleu, a.rouge, a.jaune{
+	
+	-webkit-transition: all 1s; /* Safari prior 6.1 */
+  transition: all 1s;
+
+}
+
+
+a.bleu:hover{
+/* outline: 5px solid grey;*/
+color: #0079A5;
+ /*color: #FF495D;*/
+ /*text-decoration: none;*/
+ -webkit-transition: all 1s; /* Safari prior 6.1 */
+  transition: all 1s;
+ /* transform: scale(.9, .9);*/
+}
+ a.rouge:hover{
+ /*outline: 5px solid grey;*/
+ color: #FF495D;
+ /*color: #0079A5;*/
+ /*text-decoration: none;*/
+ -webkit-transition: all 1s; /* Safari prior 6.1 */
+  transition: all 1s;
+ /* transform: scale(.9, .9);*/
+}
+ a.jaune:hover{
+ /*outline: 5px solid grey;*/
+ color: #FFDD37;
+ /*color: #0079A5;*/
+ /*text-decoration: none;*/
+ -webkit-transition: all 1s; /* Safari prior 6.1 */
+  transition: all 1s;
+ /* transform: scale(.9, .9);*/
+}
+
+
+
+
+.arrow-downrouge {
+  width: 0; 
+  height: 0; 
+  border-left: 200px solid transparent;
+  border-right: 200px solid transparent;
+  
+  border-top: 40px solid #FF495D;
+ /* -webkit-transition: all 1s;
+  transition: all 1s;*/
+}
+
+.arrow-downbleu {
+  width: 0; 
+  height: 0; 
+  border-left: 200px solid transparent;
+  border-right: 200px solid transparent;
+  display: block;
+  border-top: 40px solid #0079A5;
+ /* -webkit-transition: all 1s; 
+  transition: all 1s;*/
+}
+
+.arrow-downjaune {
+  width: 0; 
+  height: 0; 
+  border-left: 200px solid transparent;
+  border-right: 200px solid transparent;
+  
+  border-top: 40px solid #FFDD37;
+ /* -webkit-transition: all 1s; 
+  transition: all 1s;*/
+}
+
+
+
+
+#conseils {
+	/*text-align: center;*/
+	max-width: 80%;
+	margin: 0 auto;
+}
+
+#conseils .blocrouge {
+background-color: #FF495D; 
+max-width:503px; 
+height: 100%; 
+width: 100%; 
+padding: 3rem;
+float: right;
+overflow: auto;
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+
+
+#conseils h1 {
+font-size: 2.2rem;
+color: #FFDD37;
+text-align: center;
+margin-bottom: 2rem;
+}
+
+
+#conseils .ligne {
+padding-right: 7px;
+padding-left: 7px;
+margin-bottom: 14px;
+}
+
+#conseils .ligne2 {
+padding-right: 4px;
+padding-left: 4px;
+margin-bottom: 4px;
+}
+
+#conseils .bloc2 {
+padding: 4px;
+}
+
+#conseils .bloc {
+padding: 3px;
+}
+
+
+#conseils p {
+font-size: 0.9rem;
+font-weight: 200;
+}
+
+
+	
+	.video-responsive{
+    overflow:hidden;
+    margin-top: 1rem;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+.video-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+  .video-fluid{
+	  height:100%;
+	  width:100%;
+	  /* background-color: black; */
+  }  
+
+
+
+#backtotop {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  /*background-color: red; */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 30px; /* Rounded corners */
+/*background-color: rgba(0, 0, 0, 1);
+            background-repeat: no-repeat;
+            background-position: center center;*/
+background-image: url(flechetotop.png);  
+            height: 55px;
+            width: 55px;
+            /*transform: rotate(-90deg);*/
+}
+
+#backtotop:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+}
+
+
+
+/*****************LOADER***************/
+
+
+
+@keyframes tourne {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.container-loader {
+	padding: 0;
+	margin: 0;
+width: 100%;
+height: 100%;
+   background-color: #fff; 
+
+	}
+
+	.aucentre{
+	
+		width: 100%;
+		height:100%;
+	  transform: translate(-60px, -60px);
+		-webkit-transform: translate(-60px, -60px);
+	}
+	
+.loader {
+border: 20px solid transparent;
+  border-bottom: 20px solid #FF495D;
+    border-top: 20px solid #FFDD37; 
+    border-radius: 50%;
+   width: 150px;
+    height: 150px;
+position: absolute;
+top: 50%;
+ 	left: 50%;
+   animation: spin 2s linear infinite;
+	 -webkit-animation: spin 2s linear infinite;
+
+}
+
+
+
+
+
+/********************RESPONSIVE******************/
+
+
+
+@media (max-width: 992px){
+
+/*
+	.texte-menu{
+		display: none;
+	}*/
+
+
+	.navbar-nav{
+	max-width: 95%;
+}
+	header{
+	max-width: 95%;
+}
+	.docteurs{
+	font-size: 1.5rem;
+}
+
+#cabinet h1 {
+font-size: 1.5rem;
+
+margin-bottom: 1rem;
+}
+
+#cabinet p {
+font-size: 0.8rem;
+
+}
+
+
+}
+
+@media (max-width: 700px){
+
+.texte-menu{
+	display: none;
+}
+
+
+ }
+
+
+
+@media (min-width: 1024px){
+
+#fichesconseils{
+	max-width: 80%;
+	margin: 0 auto;
+}
+
+
+ }
+
+
+ @media (min-width: 1297px){
+
+
+
+#videos{
+	/*max-width: 80%;*/
+	margin: 0 auto;
+}
+
+ }*
