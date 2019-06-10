@@ -11,14 +11,15 @@
 		window_height = $( window ).height();
 
 
-			
+			hauteurheader = $('header').height();
+			$('#bienvenue').css('margin-top', hauteurheader);
 
 
 
 	if(window_width > 1297){
 
 			largeurbonsgestes = (($('.imagecabinet').height()) + 8) * 2;
-			console.log(largeurbonsgestes);
+			//console.log(largeurbonsgestes);
 			$('#videos').css('max-width', largeurbonsgestes);
 
 
@@ -26,7 +27,7 @@
 
 			largeurblocrougemid = $('#mid').outerWidth();
 		border = largeurblocrougemid/2 + "px solid transparent";
-		console.log(border);
+		//console.log(border);
 		$('.arrow-downrouge').css('border-left', border); 
 		$('.arrow-downrouge').css('border-right', border); 
 
@@ -53,11 +54,11 @@
 
 		$('.blocbleu').css('height', imageheight); 
 		
-			if(( window_width < 1024 ) && (window_width > 768)){
+			if((( window_width < 1024 ) && (window_width > 768)) || (window_width < 550) ){
 
 		//		$('.blocrouge').css('height', ""); 
 		//		$('.blocbleu').css('height', ""); 
-
+console.log("1");
 					$('.blocrouge').css('display', "block"); 
 				$('.blocbleu').css('display', "block"); 
 				$('.blocjaune').parent().removeClass('order-last'); 
@@ -66,14 +67,16 @@
 
 			if( window_width > 768 ) {
 							$('.blocjaune').parent().removeClass('order-last'); 
+							console.log("2");
 			}
 
-						if(( window_width >= 1024 ) || (window_width < 768)){
+			if(( window_width >= 1024 ) || ((window_width < 768) && (window_width > 550))){
 
 					$('.blocrouge').css('display', "flex"); 
 				$('.blocbleu').css('display', "flex"); 
 				$('.blocrouge').css('float', "right"); 
 				$('.blocbleu').css('float', "left"); 
+				console.log("3");
 
 			}
 
@@ -86,7 +89,13 @@
 
 
 				$('.blocjaune').parent().addClass('order-last'); 
+				console.log("4");
 			}
+
+		/*	if(window_width < 550){
+				$('.blocrouge').css('display', "block"); 
+				$('.blocbleu').css('display', "block"); 
+			}*/
 
 	}
 
@@ -173,7 +182,25 @@ console.log("ok");
    
 var scroll = new SmoothScroll('#backtotop');
    
-window.onscroll = function() {scrollFunction()};
+window.onscroll = function() {
+
+	scrollFunction();
+
+	hauteurheader = $('header').outerHeight();
+	//hauteursousmenu = $('#sousmenuconseils').outerHeight();
+	//$('#bienvenue').css('margin-top', hauteurheader);
+
+	if (document.body.scrollTop > hauteurheader || document.documentElement.scrollTop > hauteurheader) {
+		$('#sousmenuconseils').addClass('fixed-top');
+		$('#sousmenuconseils').css('top', hauteurheader );
+	}
+else {
+    $('#sousmenuconseils').removeClass('fixed-top');
+    //$('#sousmenuconseils').css('top', hauteurheader);
+  }
+
+
+};
 
 
 

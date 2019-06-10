@@ -66,19 +66,31 @@ html, body{
 
 header{
 padding: 1rem;
-display: flex;
+/*display: flex;
 justify-content: space-between;
-align-items: center;
+align-items: center;*/
 	max-width: 80%;
 	margin: 0 auto;
+	background-color: white;
+	/*position: fixed;*/
 }
+
+header .container-fluid{
+
+	padding: 0;
+} 
+header .row{
+	align-items: center;
+	padding: 0;
+}
+
 
 
 .docteurs{
 	/*display: inline;*/
 	text-align: right;
 	color: #0079A5;
-	font-size: 2rem;
+	font-size: 1.5rem;
 	line-height: 1.06;
 	
 }
@@ -279,18 +291,23 @@ float: right;
 	color: #FFDD37;
 }
 
-
+/*
 #sousmenuconseils .fixed{
 position: fixed;
 top:100px;
 z-index: 100;
 background-color: white;
-}
+}*/
 
+/*
+#sousmenuconseils {
+padding-top: 1rem;
+}*/
 
 #sousmenuconseils a {
 	padding-right: 0px;
 padding-left: 30px;
+
 }
 
 .bgrouge{
@@ -637,7 +654,7 @@ top: 50%;
 	max-width: 95%;
 }
 	.docteurs{
-	font-size: 1.5rem;
+	font-size: 1rem;
 }
 
 #cabinet h1 {
@@ -660,6 +677,13 @@ font-size: 0.8rem;
 	display: none;
 }
 
+#conseils .blocrouge{
+	padding: 1rem;
+}
+#conseils h1{
+	font-size: 1.8rem;
+	margin-bottom: 1rem;
+}
 
  }
 
