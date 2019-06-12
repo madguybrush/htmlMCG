@@ -411,19 +411,6 @@ float: right;
 	color: #FFDD37;
 }
 
-/*
-#sousmenuconseils .fixed{
-position: fixed;
-top:100px;
-z-index: 100;
-background-color: white;
-}*/
-
-/*
-#sousmenuconseils {
-padding-top: 1rem;
-}*/
-
 #sousmenuconseils a {
 	padding-right: 0px;
 /*padding-left: 30px;*/
