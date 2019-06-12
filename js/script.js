@@ -239,6 +239,10 @@ hauteurheader = $('header').outerHeight();
 		$('#sousmenuconseils').css('top', hauteurheader );
 		//$('header').css('padding', ".5rem" );
 		i = 1;
+
+			$('#bienvenue').css('margin-top', hauteurheader);
+
+
 	}
 else {
     $('#sousmenuconseils').removeClass('fixed-top');
@@ -248,6 +252,8 @@ else {
     }
     if(window_width > 768){
     	$('.navbar').removeClass('navbar-scroll');
+    		hauteurheader = $('header').outerHeight();
+    	$('#bienvenue').css('margin-top', hauteurheader);
     }
 	//$('header').css('padding', "1rem" );
     //$('#sousmenuconseils').css('top', hauteurheader);
