@@ -11,10 +11,23 @@
 		window_height = $( window ).height();
 
 
+
+//positionscroll = Math.round($(window).scrollTop());
+
+
 		hauteurronds = $('.content').outerHeight();
+		//hauteurbox = $('.content').outerHeight();
+		largeurbox = $('.content').outerWidth();
+		//hauteurfront = $('.front').outerHeight();
+
+//$('.content').css('width', Math.round(hauteurronds)); 
+//$('.content').css('height', Math.round(hauteurronds)); 
 
 $('.flip-container').css('height', hauteurronds); 
-$('.back img').css('width', hauteurronds); 
+//$('.back img').css('width', hauteurronds); 
+//back').css('height', hauteurfront); 
+$('.front img').css('width', hauteurronds); 
+//$('.front img').css('height', hauteurronds); 
 
 
 
@@ -138,7 +151,7 @@ $('.blocjaune').css('height', imageheight);
 	$('.navbar').addClass('navbar-scroll');
 
 
-				$('.blocjaune').parent().addClass('order-last'); 
+				$('#cabinet .blocjaune').parent().addClass('order-last'); 
 			//	console.log("4");
 			}
 
@@ -241,6 +254,24 @@ $('.flip-container').css('height', hauteurronds);
 	
 
 
+ $('.back').css('backface-visibility', 'hidden');
+
+$( ".flip-container" ).mouseenter(
+  function() {
+  	   //$('.back').css('backface-visibility', 'visible');
+  	   $(this).find(".back").css("backface-visibility","visible");
+
+  }
+);
+
+$( ".flip-container" ).mouseleave(
+  function() {
+  	  // $('.back').css('backface-visibility', 'hidden');
+$(this).find(".back").css("backface-visibility","hidden");
+  }
+);
+
+
 
 
 
@@ -288,32 +319,7 @@ window.onscroll = function() {
 
 hauteurheader = $('header').outerHeight();
 inverhauteurheader = - hauteurheader;
-	//hauteursousmenu = $('#sousmenuconseils').outerHeight();
-	//$('#bienvenue').css('margin-top', hauteurheader);
 
- //console.log($(window).scrollTop() == ($(document).height() - $(window).height()));
-
-positionscroll = $(window).scrollTop();
-hauteurpage = $(document).height() - $(window).height();
-//console.log(positionscroll);
-//console.log(hauteurpage);
-
-
-// var scrollBottom = $(window).scrollTop() + $(window).height();
-//var basdepage =  $(document).height();
-
- //$( document ).scrollTop( );
-
-//if (document.body.scrollTop >= basdepage || document.documentElement.scrollTop >= basdepage) {
-
-hauteurfooter = $('footer'). outerHeight();
-
-if ($(window).scrollTop() == ($(document).height() - $(window).height())){
-	$('#backtotop').css('bottom', hauteurfooter);
- }
-else{
-	$('#backtotop').css('bottom', '50px');
-}
 
 /*
 hauteursousmenu = $('#sousmenuconseils').outerHeight();
@@ -387,11 +393,30 @@ $('.anchor').css('height', hauteurheader);*/
 
 function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    //document.getElementById("backtotop").style.display = "block";
+
      $('#backtotop').removeClass('d-none');
   } else {
-    //document.getElementById("backtotop").style.display = "none";
+
      $('#backtotop').addClass('d-none');
   }
+
+
+
+positionscroll = Math.round($(window).scrollTop());
+//console.log(positionscroll);
+hauteurpage = Math.round($(document).height() - $(window).height());
+//console.log(hauteurpage);
+
+var diff = Math.abs( positionscroll - hauteurpage );
+
+hauteurfooter = $('footer').outerHeight();
+
+if (diff <= 1){
+	$('#backtotop').css('bottom', hauteurfooter);
+ }
+else{
+	$('#backtotop').css('bottom', '50px');
+}
+
 }
 
