@@ -85,6 +85,7 @@ $('.front img').css('width', hauteurronds);
 		imageheight = $('.imagecabinet').height();
 //if(window_width > 768){
 		$('.blocrouge').css('height', imageheight); 
+		$('.blocmaps iframe').css('height', imageheight); 
 $('.blocjaune').css('height', imageheight); 
 		$('.blocbleu').css('height', imageheight); 
 		$('.blocblanc').css('height', imageheight); 
@@ -253,21 +254,26 @@ $('.flip-container').css('height', hauteurronds);
 	});
 	
 
-
+  $('.back').css('-webkit-backface-visibility', 'hidden');
  $('.back').css('backface-visibility', 'hidden');
+
+
 
 $( ".flip-container" ).mouseenter(
   function() {
   	   //$('.back').css('backface-visibility', 'visible');
-  	   $(this).find(".back").css("backface-visibility","visible");
-
+  	 
+  	   $(this).find(".back").css("-webkit-backface-visibility","visible");
+  $(this).find(".back").css("backface-visibility","visible");
   }
 );
 
 $( ".flip-container" ).mouseleave(
   function() {
   	  // $('.back').css('backface-visibility', 'hidden');
-$(this).find(".back").css("backface-visibility","hidden");
+
+ $(this).find(".back").css("-webkit-backface-visibility","hidden");
+ $(this).find(".back").css("backface-visibility","hidden");
   }
 );
 
