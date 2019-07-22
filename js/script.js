@@ -86,6 +86,7 @@ $('.front img').css('width', hauteurronds);
 //if(window_width > 768){
 		$('.blocrouge').css('height', imageheight); 
 		$('.blocmaps iframe').css('height', imageheight); 
+		$('.blocmaps').css('height', imageheight); 
 $('.blocjaune').css('height', imageheight); 
 		$('.blocbleu').css('height', imageheight); 
 		$('.blocblanc').css('height', imageheight); 

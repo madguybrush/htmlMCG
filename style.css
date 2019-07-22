@@ -1,7 +1,7 @@
 /*
 Theme Name: Orthodontie Lastresne
-Theme URI: http://understrap.com
-Author: Holger Koenemann
+Theme URI: 
+Author: 
 Author URI: http://www.holgerkoenemann.de
 GitHub Theme URI: https://github.com/understrap/understrap
 Description: Combination of Automattic´s _s theme and Bootstrap 4. Made as a solid starting point for your next theme project and WordPress website. Use it as starter theme or as a parent theme. It is up to you. Including Font Awesome support, built-in widget slider and much more you need for basic websites. IMPORTANT: All developer dependencies are not bundled with this install file. Just download the .zip, extract it and run "npm install" and "gulp copy-assets" inside the extracted /understrap folder.
@@ -80,12 +80,19 @@ background-color: white;
 
 	header .container-fluid{
 
-		padding: 0;
+		/*padding: 0;*/
 		max-width: 80%;
-		margin: 0 auto;
+		/*margin: 0 auto;*/
 	} 
-	header .row{
-		align-items: center;
+	header.hp .row{
+		align-items: flex-end;
+	/*align-items: center;*/
+		padding: 0;
+	}
+
+		header .row{
+	
+	align-items: flex-start;
 		padding: 0;
 	}
 
@@ -99,17 +106,36 @@ background-color: white;
 		margin: 0 auto;
 	}
 
+	.navbar-brand{
+		padding-top: 0;
+		padding-bottom: 0;
+
+	}
+	.navbar-brand img{
+
+		vertical-align: top;
+	}
+
+		.hp .navbar-brand{
+		padding-top: .3125rem;
+		padding-bottom: .3125rem;
+	}
+
+	
+
 	.docteurs{
 		/*display: inline;*/
 		text-align: right;
 		color: #0079A5;
-		font-size: 1.5rem;
+		/*font-size: 1.5rem;*/
+		font-size: 1.5vw;
 		line-height: 1.06;
 
 	}
 	.hp .docteurs{
-		font-size: 1.8rem;
-
+		/*font-size: 2.1rem;*/
+font-size: 2.5vw;
+line-height: 1.02;
 
 	}
 
@@ -199,11 +225,17 @@ color: white;
 font-size: .9rem;
 }
 
+footer.inverse{
+	background-color: #fff;
+
+}
+
 footer .container-fluid{
 	background-color: #0079A5;
 	justify-content: space-between;
 	/*color: #0079A5;*/
 	padding: 2rem;
+	width: 80%;
 
 }
 
@@ -246,6 +278,15 @@ footer .inverse a:hover {
 	text-decoration: none;
 }
 
+
+
+.bienvenue{
+max-width: 80%; 
+padding-bottom: 3rem; 
+padding-top: 3rem; 
+margin-bottom: 3rem;
+margin-top: 3rem;
+}
 
 #cabinet {
 	/*text-align: center;*/
@@ -324,20 +365,32 @@ img {
 }
 
 #cabinet h2 {
-	font-size: 1.6rem;
+	/*font-size: 1.6rem;*/
+	font-size: 2vw;
 	color: #FF495D;
-	margin-top: 2.2rem;
-	margin-bottom: 1.2rem;
+	margin-top: 2rem;
+	margin-bottom: 1rem;
 }
 
 
 #cabinet p {
 	font-size: 0.9rem;
+	/*font-size: 1.5vw;*/
 	font-weight: 200;
+
 }
 
-#cabinet p span{
-	font-size: 1.1rem;
+
+
+#cabinet .content p {
+	/*font-size: 0.9rem;*/
+	font-size: 1vw;
+	font-weight: 200;
+
+}
+
+#cabinet .content p span{
+	font-size: 1.2vw;
 	font-weight: 200;
 	line-height: 1.2rem;
 }
@@ -800,6 +853,10 @@ a:hover{
 	margin: 0 auto;
 }
 
+
+
+
+
 #conseils .blocrouge {
 	background-color: #FF495D; 
 	/*max-width:503px; */
@@ -848,7 +905,17 @@ a:hover{
 	font-weight: 200;
 }
 
+#conseils .carte{
+	font-size: 2.5vw; /*2.2rem;*/
+}
 
+@media (max-width: 576px){
+#conseils .carte{
+	font-size: 4vw; /*2.2rem;*/
+}
+
+
+}
 
 .video-responsive{
 	overflow:hidden;
@@ -922,6 +989,10 @@ a:hover{
         	max-width: 80%;
         	margin: 0 auto;
         }
+
+        #ortho .imgrond{
+max-width: 70%;
+}
 
        /* #ortho div {
         	padding-right: 7px;
@@ -1024,6 +1095,11 @@ a:hover{
 }
 #contact .ligne {
 	margin-bottom: 14px;
+}
+
+#contact .blocmaps {
+padding: 0;
+
 }
 
 #contact .blocrouge {
@@ -1206,14 +1282,23 @@ margin-left:0;*/
 	width: 90%;	
 	}*/
 
+
+
+#cabinet h2 {
+	margin-top: 1rem;
+	margin-bottom: 0.5rem;
+}
+
+
+
 	.popup{
 		padding-left: 10%;
 		padding-right: 10%;
 	}
 
-	#cabinet p span{
+	/*#cabinet p span{
 		font-size: .9rem;
-	}
+	}*/
 
 	.navbar-nav{
 		max-width: 95%;
@@ -1221,14 +1306,19 @@ margin-left:0;*/
 		/*header .container-fluid{
 			max-width: 95%;
 			}*/
-			.docteurs{
+		
+
+		/*	.docteurs{
 				font-size: 1rem;
 			}
-				.hp .docteurs{
+*/
+
+			
+			/*	.hp .docteurs{
 		font-size: 1.1rem;
 
 
-	}
+	}*/
 
 			#cabinet h1 {
 				font-size: 1.5rem;
@@ -1236,19 +1326,57 @@ margin-left:0;*/
 				margin-bottom: 1rem;
 			}
 
-			#cabinet p {
+			/*#cabinet p {
 				font-size: 0.8rem;
 
 			}
-
+*/
 
 		}
 
-		@media (max-width: 700px){
+		@media (max-width: 768px){ /* 700 ????*/
 /*
 html{
 	font-size: 80%;
 	}*/
+
+
+
+#cabinet h2 {
+	font-size: 4vw;
+	color: #FF495D;
+	margin-top: 2rem;
+	margin-bottom: 1rem;
+}
+
+
+#cabinet p {
+	font-size: 2.4vw;
+	font-weight: 200;
+
+}
+
+#cabinet p span{
+	font-size: 3vw;
+	font-weight: 200;
+	line-height: 1.2rem;
+}
+
+
+
+.docteurs{
+		/*font-size: 1rem;*/
+		font-size: 2.5vw;
+
+	}
+
+		.hp .docteurs{
+		/*font-size: 1rem;*/
+		font-size: 3.5vw;
+
+	}
+
+
 
 	.texte-menu{
 		display: none;
@@ -1305,6 +1433,13 @@ html{
 
 @media (max-width: 600px){
 
+		.hp .docteurs{
+		/*font-size: 1rem;*/
+		font-size: 5vw;
+
+	}
+
+
 	#ortho h1{
 		font-size: 1.5rem;
 	}
@@ -1315,11 +1450,6 @@ html{
 
 	.docteurs{
 		font-size: .8rem;
-	}
-		.hp .docteurs{
-		font-size: 1rem;
-
-
 	}
 
 	#hp, #cabinet, #ortho .container-fluid, #conseils, #contact, #sousmenuconseils, header .container-fluid{
