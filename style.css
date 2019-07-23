@@ -1351,15 +1351,29 @@ html{
 
 
 #cabinet p {
-	font-size: 2.4vw;
+	font-size: 3vw;
 	font-weight: 200;
 
 }
 
+/*
 #cabinet p span{
 	font-size: 3vw;
 	font-weight: 200;
 	line-height: 1.2rem;
+}*/
+
+#cabinet .content p {
+	/*font-size: 0.9rem;*/
+	font-size: 2.6vw;
+	font-weight: 200;
+
+}
+
+#cabinet .content p span{
+	font-size: 3vw;
+	font-weight: 200;
+	/*line-height: 1.2rem;*/
 }
 
 

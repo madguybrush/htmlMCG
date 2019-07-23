@@ -136,14 +136,20 @@ $('.blocjaune').css('height', imageheight);
 			//	console.log("3");
 
 			}
-			if((window_width < 768) && (window_width >500)){
+			/*if((window_width < 768) && (window_width >500)){
 
 				$('.blocrouge').css('display', "flex");
 				$('.blocbleu').css('display', "flex");
 				$('.blocjaune').css('display', "flex");
 
-			}
+			}*/
 			if(window_width < 768){
+
+
+$('.blocrouge').css('display', "flex");
+				$('.blocbleu').css('display', "flex");
+				$('.blocjaune').css('display', "flex");
+
 				$('.blocrouge').css('float', "left"); 
 				$('.blocbleu').css('float', "left"); 
 				$('.blocjaune').css('float', "left"); 
